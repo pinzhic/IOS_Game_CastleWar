@@ -41,8 +41,10 @@ static const int BOARD_SIZE = 11;
     Facility * castle2;
     
     // particle
-
+    BOOL hintMark;
+    CCSprite* hint;
     
+
 }
 
 
@@ -69,6 +71,9 @@ static const int BOARD_SIZE = 11;
     _currMagic = 0;
     srand48(time(0));
     
+    hint = [CCSprite spriteWithImageNamed:@"CivAsset/dot.png"];
+    hint.visible = false;
+    [self addChild:hint];
     }
 
 - (void) loadMap:(int)number
@@ -675,7 +680,36 @@ static const int BOARD_SIZE = 11;
 }
 
 
-
+-(void) update:(CCTime)delta
+{
+    hintMark = !hintMark;
+    hint.opacity = .5;
+    hint.visible = false;
+    if (_currUnit != nil && [_currUnit isValid]){
+        //NSLog(@"check");
+        
+        hint.position = _currUnit.position;
+        if (hintMark){
+            hint.visible = true;
+        }
+        
+        
+    }
+    
+    castle1.opacity = 1;
+    castle2.opacity = 1;
+    if (gb.currPlayer == 1){
+        if (hintMark){
+            castle1.opacity =.5;
+        }
+        
+    }
+    if (gb.currPlayer == 2){
+        if (hintMark){
+            castle2.opacity = .5;
+        }
+    }
+}
 
 
 -(void) printTest:(int) inx

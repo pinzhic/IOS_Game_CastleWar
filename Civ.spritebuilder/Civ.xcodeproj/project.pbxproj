@@ -37,6 +37,7 @@
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		CB2E4F8019861D2000E8FE57 /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2E4F7F19861D2000E8FE57 /* Check.m */; };
+		CB787D6A199201660048E62C /* Hint.m in Sources */ = {isa = PBXBuildFile; fileRef = CB787D69199201660048E62C /* Hint.m */; };
 		D6064CA5196A7AF900F2FC29 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = D6064CA4196A7AF900F2FC29 /* Board.m */; };
 		D63E8CA71973708C008CA2DB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D63E8CA61973708C008CA2DB /* Player.m */; };
 		D63E8CAB19739C4D008CA2DB /* Facility.m in Sources */ = {isa = PBXBuildFile; fileRef = D63E8CAA19739C4D008CA2DB /* Facility.m */; };
@@ -102,6 +103,8 @@
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
 		CB2E4F7E19861D2000E8FE57 /* Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Check.h; path = Source/Check.h; sourceTree = "<group>"; };
 		CB2E4F7F19861D2000E8FE57 /* Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Check.m; path = Source/Check.m; sourceTree = "<group>"; };
+		CB787D68199201660048E62C /* Hint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hint.h; path = Source/Hint.h; sourceTree = "<group>"; };
+		CB787D69199201660048E62C /* Hint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hint.m; path = Source/Hint.m; sourceTree = "<group>"; };
 		D6064CA3196A7AF900F2FC29 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Board.h; path = Source/Board.h; sourceTree = "<group>"; };
 		D6064CA4196A7AF900F2FC29 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Board.m; path = Source/Board.m; sourceTree = "<group>"; };
 		D63E8CA51973708C008CA2DB /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 			children = (
 				D6064CA3196A7AF900F2FC29 /* Board.h */,
 				D6064CA4196A7AF900F2FC29 /* Board.m */,
+				CB787D68199201660048E62C /* Hint.h */,
+				CB787D69199201660048E62C /* Hint.m */,
 				D644E09B1975B27600FC952F /* Move.h */,
 				D644E09C1975B27600FC952F /* Move.m */,
 				D63E8CA919739C4D008CA2DB /* Facility.h */,
@@ -390,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB787D6A199201660048E62C /* Hint.m in Sources */,
 				D6DA06541972328F007ED5F5 /* Unit.m in Sources */,
 				CB2E4F8019861D2000E8FE57 /* Check.m in Sources */,
 				D6EF31F9196229AA003A9926 /* PlayBoard.m in Sources */,

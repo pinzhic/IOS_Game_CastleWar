@@ -63,6 +63,9 @@ static const int FTMANCOST = 100;
     CCButton *_fire1;
     CCButton *_heal1;
     
+    CCSprite* hint;
+    BOOL hintMark;
+    CCSprite* _dot;
     
 }
 
@@ -148,7 +151,13 @@ static const int FTMANCOST = 100;
     _numOfPlayer = 2;
     
 
+    //hint
+    hint = [CCSprite spriteWithImageNamed:@"CivAsset/dot.png"];
+    hint.visible = false;
+    [self addChild:hint];
     
+    _dot.visible =false;
+    _dot.opacity = .5;
     
 }
 
@@ -333,6 +342,21 @@ static const int FTMANCOST = 100;
 - (void)update:(CCTime)delta
 {
     [self checkChanges];
+    hintMark = !hintMark;
+    hint.visible =false;
+    _dot.visible = false;
+    if ([_board _currFacility]!= nil && [[_board _currFacility] isValid]){
+        //Facility* fa = [_board _currFacility];
+        /*
+        hint.position = _faciButton1.parent.parent.parent.parent.parent.position;
+        if (hintMark){
+            hint.visible = true;
+            _faciButton1.opacity = .5;
+        }
+         */
+        _dot.visible = hintMark;
+    }
+    
 }
 
 - (void) fire1pressed
